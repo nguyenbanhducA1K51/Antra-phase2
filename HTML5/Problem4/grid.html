@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Grid Layout Tutorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    
+ .container {
+     
+     max-width: 600px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 100px 100px 100px;
+      gap: 10px;
+      grid-template-areas: 
+        "title title title title " 
+        "google google github github"
+        "fb gmail youtube cell-2048"
+        "food game game social-life-and-sleep"
+        "beer beer beer wc";
+      
+        margin-bottom: 40px;
+    }
+    
+    .google { grid-area: google; }
+    .github { grid-area: github; }
+    .fb { grid-area: fb; }
+    .gmail { grid-area: gmail; }
+    .youtube { grid-area: youtube; }
+    .food { grid-area: food; }
+    .game { grid-area: game; }
+    .social-life-and-sleep { grid-area: social-life-and-sleep; }
+    .beer { grid-area: beer; }
+    .wc { grid-area: wc; }
+
+    
+    .title-area {
+      grid-area: title;
+      border-bottom: 3px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .title-area h1 {
+      margin: 0;
+      padding: 15px;
+      font-size: 36px;
+    }
+    
+    .grid-item {
+      border-right: 3px solid black;
+      border-bottom: 3px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .grid-item:nth-child(4n) {
+      border-right: none;
+    }
+    
+    .grid-item:nth-child(n+13) {
+      border-bottom: none;
+    }
+    
+    .title { grid-area: title; }
+    .google { grid-area: google; }
+    .github { grid-area: github; }
+    .fb { grid-area: fb; }
+    .gmail { grid-area: gmail; }
+    .youtube { grid-area: youtube; }
+    .special { 
+      grid-area: special;
+      padding: 0;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    .cell-2048 { grid-area: cell-2048; }
+    .social, .sleep {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+    }
+    
+    .food { grid-area: food; }
+    .game { grid-area: game; }
+    .beer { 
+      grid-area: beer; 
+      justify-content: flex-end;
+    }
+    .wc { grid-area: wc; }
+    
+    .demo-item {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+     .github-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: end;
+      align-items: start;
+    }
+
+    .google-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+    }
+    .facebook-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .gmail-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+     .youtube-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+    }
+       .item-2048 {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+     .food-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+    }
+     .game-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: start;
+      align-items: end;
+    }
+      .beer-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+      .wc-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    .social-life-and-sleep-group{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .social-life-and-sleep-group>*{
+     
+      margin:0;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="container">
+
+   
+  <div class="areas-grid">
+    <div class="demo-item title"> 
+        <span>Antra LIFE</span>
+    </div>
+    <div class="google-item google">
+        <div>
+            Google
+        </div>
+    </div>
+    <div class="github-item github">
+        
+        GitHub</div>
+    <div class="facebook-item fb">FB</div>
+    <div class="gmail-item gmail">GMail</div>
+    <div class="youtube-item youtube">YouTube</div>
+    <div class="item-2048 cell-2048">
+        2048
+    </div>
+    <div class="social-life-and-sleep-group social-life-and-sleep">
+      <div class="demo-item social">Social Life</div>
+      <div class="demo-item sleep">Sleep</div>
+    </div>
+    <div class="food-item food">Food</div>
+    <div class="game-item game">Game</div>
+    <div class="beer-item beer">Beer></div>
+    <div class="wc-item wc">WC</div>
+   
+  </div>
+   </div>
+ 
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Antra LIFE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .container {
+      width: 600px;
+      border: 3px solid black;
+      margin: 0 auto;
+    }
+    
+    .header {
+      border-bottom: 3px solid black;
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    
+    .row {
+      display: flex;
+      border-bottom: 3px solid black;
+    }
+    
+    .row:last-child {
+      border-bottom: none;
+    }
+    
+    .cell {
+      padding: 15px;
+      border-right: 3px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .cell:last-child {
+      border-right: none;
+    }
+    
+    .google-github {
+      flex: 1;
+      height: 80px;
+    }
+    
+    .fb {
+      width: 25%;
+      height: 80px;
+    }
+    
+    .gmail {
+      width: 25%;
+      height: 80px;
+    }
+    
+    .youtube {
+      width: 25%;
+      height: 80px;
+    }
+    
+    /* .2048 {
+      width: 25%;
+      height: 80px;
+    } */
+    
+    .food {
+      width: 25%;
+      height: 80px;
+    }
+    
+    .game {
+      width: 25%;
+      height: 80px;
+    }
+    
+    .right-section {
+      width: 50%;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .social-sleep {
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .inner-cell {
+      border: 2px solid black;
+      margin: 10px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .beer {
+      width: 75%;
+      height: 80px;
+      text-align: right;
+      padding-right: 20px;
+    }
+    
+    .wc {
+      width: 25%;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Antra LIFE</h1>
+    </div>
+    
+    <!--  Google | GitHub -->
+    <div class="row">
+      <div class="cell google-github">Google</div>
+      <div class="cell google-github">GitHub</div>
+    </div>
+    
+    <!--  FB | Gmail | YouTube | 2048 -->
+    <div class="row">
+      <div class="cell fb">FB</div>
+      <div class="cell gmail">GMail</div>
+      <div class="cell youtube">YouTube</div>
+      <div class="cell 2048">2048</div>
+    </div>
+    
+    <!--  Food | Game | Social Life & Sleep -->
+    <div class="row">
+      <div class="cell food">Food</div>
+      <div class="cell game">Game</div>
+      <div class="cell right-section">
+        <div class="social-sleep">
+          <div class="inner-cell">Social Life</div>
+          <div class="inner-cell">Sleep</div>
+        </div>
+      </div>
+    </div>
+    
+    <!--  Beer > | WC -->
+    <div class="row">
+      <div class="cell beer">Beer &gt;</div>
+      <div class="cell wc">WC</div>
+    </div>
+  </div>
+</body>
+</html>
