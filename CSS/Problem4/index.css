@@ -1,0 +1,242 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.8), rgba(139, 195, 74, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><rect fill="%234CAF50" width="1200" height="300"/><circle fill="%23FFF9C4" cx="900" cy="80" r="40" opacity="0.8"/><ellipse fill="%232E7D32" cx="200" cy="250" rx="150" ry="80"/><ellipse fill="%23388E3C" cx="800" cy="220" rx="200" ry="100"/><rect fill="%23795548" x="500" y="200" width="80" height="100"/><rect fill="%23795548" x="520" y="180" width="40" height="30"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding: 10px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            margin-right: 50px;
+        }
+
+        .nav {
+            background-color: #e8e8e8;
+            border-bottom: 2px solid #ddd;
+            padding: 0;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .nav li {
+            border-right: 1px solid #ccc;
+        }
+
+        .nav li:last-child {
+            border-right: none;
+        }
+
+        .nav a {
+            display: block;
+            padding: 12px 25px;
+            text-decoration: none;
+            color: #666;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #d4edda;
+            color: #2e7d32;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+        }
+
+        .content{
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .welcome-title {
+            color: #4caf50;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: #4caf50;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .content-text {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .products-section h3 {
+            color: #4caf50;
+            margin: 25px 0 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .product {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product:last-child {
+            border-bottom: none;
+        }
+
+        .product-image {
+            width: 80px;
+            height: 60px;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            border-radius: 4px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        
+        .product-info p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        .product-title{
+            color:#333;
+              margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .news-item, .message-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-item:last-child, .message-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date, .message-date {
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 0.9rem;
+        }
+
+        .news-text, .message-text {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        .footer {
+            background-color: #4caf50;
+            color: rgb(4, 4, 4);
+            text-align: start;
+            display: flex;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            align-items: center;
+          
+            height: 100px;
+        }
+        .footer-text{
+            margin-left: 200px;
+        }
+
+        .footer a {
+            color: #c8e6c9;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        .news-section{
+            padding: 30px;
+            background-color: #e2e2e2;
+        }
+        .more-info{
+            color: #4caf50;
+            font-size: small;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav ul {
+                flex-wrap: wrap;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+               
+            }
+        }
+
